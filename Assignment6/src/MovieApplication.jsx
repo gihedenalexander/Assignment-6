@@ -1,8 +1,8 @@
 import { useState } from 'react'
 import AddMovieForm from './Movie/AddMovieForm.jsx'
 import Movies from './Movie/Movies.jsx'
-import OrderByAlphaButton from './Movie/OrderByAlphaButton.jsx'
-import OrderByGradeButton from './Movie/OrderByGradeButton.jsx'
+import OrderByAlphaButton from './Buttons/OrderByAlphaButton.jsx'
+import OrderByGradeButton from './Buttons/OrderByGradeButton.jsx'
 
 function MovieApplication() {
     const [movies, setMovies] = useState([]);
