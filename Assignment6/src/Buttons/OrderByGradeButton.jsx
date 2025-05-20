@@ -1,6 +1,6 @@
-function OrderByGradeButton() {
+function OrderByGradeButton({ onClick }) {
     return (
-        <button>
+        <button className="btn btn-primary m-2" onClick={(onClick)}>
             Sortera 1-5
         </button>
     );
