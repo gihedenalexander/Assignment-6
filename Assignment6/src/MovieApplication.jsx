@@ -8,19 +8,19 @@ function MovieApplication() {
     const [movies, setMovies] = useState([]);
 
     const addMovie = (title, grade) => {
-
+        setMovies(m => [...m, { title, grade: parseInt(grade) }]);
     }
 
     const deleteMovie = (movieToDelete) => {
-        
+        setMovies(m => m.filter(movie => movie.title !== movieToDelete));
     }
 
     const sortByTitle = () => {
-        
+        setMovies(m => [...m].sort((a, b) => b.grade - a.grade));
     }
 
     const sortByGrade = () => {
-        
+        setMovies(m => [...m].sort((a, b) => a.title.localeCompare(b.title)));
     }
 
     return(
