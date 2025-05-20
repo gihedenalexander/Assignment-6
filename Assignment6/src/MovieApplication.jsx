@@ -16,11 +16,11 @@ function MovieApplication() {
     }
 
     const sortByTitle = () => {
-        setMovies(m => [...m].sort((a, b) => b.grade - a.grade));
+        setMovies(m => [...m].sort((a, b) => a.title.localeCompare(b.title)));
     }
 
     const sortByGrade = () => {
-        setMovies(m => [...m].sort((a, b) => a.title.localeCompare(b.title)));
+        setMovies(m => [...m].sort((a, b) => b.grade - a.grade));
     }
 
     return(
